@@ -3,9 +3,9 @@ package com.bridgelabs.day14_linkedlist;
 public class Main {
     public static void main(String[] args) {
         Day14LinkedList linkedList = new Day14LinkedList();
-        linkedList.add(70);
-        linkedList.addFirst(56);
-        linkedList.addFirst(36);
+        linkedList.uc1_add(56);
+        linkedList.uc3_addLast(30);
+        linkedList.uc3_addLast(70);
         linkedList.get();
     }
 }

@@ -4,7 +4,7 @@ import java.util.LinkedList;
 
 public class Day14LinkedList {
     public Node head;
-    public void add(int data)
+    public void uc1_add(int data)
     {
         Node node = new Node(data); //creating an object of Node and pushing the data to that object(node)
         if(this.head == null)
@@ -22,7 +22,7 @@ public class Day14LinkedList {
         }
         System.out.println("Added "+node.data+" to the list");
     }
-    public void addFirst(int data) // add front to the list
+    public void uc2_addFirst(int data) // add front to the list
     {
         Node node = new Node(data);
         if (this.head == null) //head has the value 70 hence else part will execute
@@ -33,6 +33,17 @@ public class Day14LinkedList {
             this.head = node;
         }
         System.out.println("Added "+node.data+" to the front");
+    }
+    public void uc3_addLast(int data) // add last to the list
+    {
+        Node node = new Node(data);
+        Node temp = head;
+        while (temp.next != null)
+        {
+            temp = temp.next;
+        }
+        temp.next = node; // next reference is fed with next node data
+        System.out.println("Added "+node.data+" to the last");
     }
     public void get()
     {
