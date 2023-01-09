@@ -45,6 +45,21 @@ public class Day14LinkedList {
         temp.next = node; // next reference is fed with next node data
         System.out.println("Added "+node.data+" to the last");
     }
+    public void uc4_insertMiddle(int data) {
+        Node node = new Node(data);
+        if(this.head == null)
+            this.head = node;
+        else {
+            Node temp = this.head;
+            Node middle = this.head;
+            while (temp.next != null && temp.next.next != null) {
+                temp = temp.next.next;
+                middle = temp.next;
+            }
+            node.next = middle.next;
+            middle.next = node;
+        }
+    }
     public void get()
     {
         Node node = head; //pushing head data to temp. if head data is null the temp will be null and it will show as empty
