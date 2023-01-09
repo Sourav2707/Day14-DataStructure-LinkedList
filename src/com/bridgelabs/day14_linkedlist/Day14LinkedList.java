@@ -60,6 +60,16 @@ public class Day14LinkedList {
             middle.next = node;
         }
     }
+    public void uc5_pop() { //delete the first element
+        if (this.head == null)
+        {
+            System.out.println("Empty linked list"); //if head is null list is empty
+        }
+       else {
+            this.head = this.head.next; //head is fead with head.next
+            System.out.println("removed the first node from the list");
+        }
+    }
     public void get()
     {
         Node node = head; //pushing head data to temp. if head data is null the temp will be null and it will show as empty
