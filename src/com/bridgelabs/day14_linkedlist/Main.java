@@ -9,9 +9,7 @@ public class Main {
         linkedList.uc1_add(30);
         linkedList.uc1_add(40);
         linkedList.uc1_add(70);
-        linkedList.get();
-        linkedList.uc7_search(40);
-        System.out.println(linkedList.uc9_searchAndDelete(linkedList.count, 40));
+        linkedList.uc10_sorting();
         linkedList.get();
     }
 }

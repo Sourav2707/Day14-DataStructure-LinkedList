@@ -128,7 +128,24 @@ public class Day14LinkedList {
         temp.next = temp.next.next;
         return "Deleted "+node.data+" from position "+position;
     }
-    String testGet1 = "";
+    public void uc10_sorting()
+    {
+        Node node;
+        Node newnode;
+        int temp;
+        for (node = this.head; node.next != null; node = node.next) //looping through the nodes one by one eg: 56, 30, 40, 70
+        {
+            for (newnode = node.next; newnode != null; newnode = newnode.next) //new node which has the node.next eg: 30
+            {
+                if (node.data > newnode.data) //if 56 > 30 //30 > 56 false //30 > 70 false
+                {
+                    temp = node.data; //temp = 56 now node.data is empty
+                    node.data = newnode.data; // storing 30 in node.data
+                    newnode.data = temp; // newnode.data = 56
+                }
+            }
+        }
+    }
     public void get()
     {
         Node node = head; //pushing head data to temp. if head data is null the temp will be null and it will show as empty
