@@ -70,6 +70,33 @@ public class Day14LinkedList {
             System.out.println("removed the first node from the list");
         }
     }
+    public void uc7_search(int data) {
+        int count = 0; //to find the index
+        int found = 0;
+        Node node = new Node(data);
+        node = this.head; //node is fed with head
+        if(node != null) //if node is not null
+        {
+            while (node != null) //while node is not null this loop will continue and breaks when node is null
+            {
+                if (node.data == data) //if the given data is equal to the node data the count will get incremented to find the index
+                {
+                    found++;
+                    break;
+                }
+                node = node.next;
+                count++;
+            }
+            if (found == 1) //found is used to whether the give data is in the list or not
+            {
+                System.out.println(node.data+" is found at index "+count);
+            }
+            else
+            {
+                System.out.println("The list is empty");
+            }
+        }
+    }
     public void get()
     {
         Node node = head; //pushing head data to temp. if head data is null the temp will be null and it will show as empty

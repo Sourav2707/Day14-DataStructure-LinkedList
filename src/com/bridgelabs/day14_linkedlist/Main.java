@@ -7,7 +7,6 @@ public class Main {
         linkedList.uc1_add(30);
         linkedList.uc1_add(70);
         linkedList.get();
-        linkedList.uc5_pop();
-        linkedList.get();
+        linkedList.uc7_search(30);
     }
 }
