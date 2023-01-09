@@ -1,5 +1,6 @@
 package com.bridgelabs.day14_linkedlist;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class Day14LinkedList {
@@ -70,9 +71,9 @@ public class Day14LinkedList {
             System.out.println("removed the first node from the list");
         }
     }
+    public int count = 0; //to find the index
+    int found = 0;
     public String uc7_search(int data) {
-        int count = 0; //to find the index
-        int found = 0;
         Node node = new Node(data);
         node = this.head; //node is fed with head
         String searchIndex = "";
@@ -99,6 +100,21 @@ public class Day14LinkedList {
             System.out.println(searchIndex);
         }
         return searchIndex;
+    }
+    public Node uc8_searchAndInsert(int position, int data) {
+        int n = 0;
+        Node node = new Node(data);
+        Node temp = head; //feeding head to the temp node
+        Node newNode = node;
+            while (n != position - 1) //0 != 2-1
+            {
+                temp = temp.next;
+                n++;
+            }
+            newNode.next = temp.next;
+            temp.next = newNode;
+            System.out.println("Inserted "+newNode.data+" at position "+position);
+        return head;
     }
     public void get()
     {
