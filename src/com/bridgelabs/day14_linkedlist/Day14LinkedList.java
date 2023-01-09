@@ -116,6 +116,19 @@ public class Day14LinkedList {
             System.out.println("Inserted "+newNode.data+" at position "+position);
         return head;
     }
+    public String uc9_searchAndDelete(int position, int data) {
+        int n = 0;
+        Node node = new Node(data);
+        Node temp = head; //feeding head to the temp node
+        while (n != (position - 1))
+        {
+            temp = temp.next;
+            n++;
+        }
+        temp.next = temp.next.next;
+        return "Deleted "+node.data+" from position "+position;
+    }
+    String testGet1 = "";
     public void get()
     {
         Node node = head; //pushing head data to temp. if head data is null the temp will be null and it will show as empty
